@@ -81,6 +81,7 @@ class SpockListener extends Listener
 
         $data = $this->data->toArray();
         $data['full_path'] = $full_path;
+        $data['relative_path'] = $this->data->path();
         $data['committer'] = User::getCurrent()->toArray();
 
         $commands = [];
